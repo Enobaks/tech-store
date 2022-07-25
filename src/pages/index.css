@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.landing-container{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: rgb(223, 223, 235);
+}
+.hero-section{
+    width: 100%;
+    height: 90vh;
+}
