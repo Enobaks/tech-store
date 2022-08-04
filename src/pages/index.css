@@ -3,13 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
-.landing-container{
+.landing-container, .login-container, .signup-container{
     width: 100%;
     height: auto;
     margin: auto;
-    background: rgb(223, 223, 235);
+    background: #ededed;
+    /* background: rgb(223, 223, 235); */
 }
 .hero-section{
     width: 100%;
     height: 90vh;
 }
+.products-wrap{
+    gap: 1.875rem;
+    position: relative;
+}
+.single-product{
+    bottom: 0;
+    position: relative;
+    transition: bottom .3s;
+}
+.single-product:hover{
+    bottom: 7px;
+}
+.input-wrap-name{
+    max-width: 48.5%;
+}
+
+

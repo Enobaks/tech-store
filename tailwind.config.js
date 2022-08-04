@@ -8,6 +8,7 @@ module.exports = {
       // },
       colors: {
         "dark-overlay": "#00000082",
+        primary: "#1071fd",
       },
     },
   },
