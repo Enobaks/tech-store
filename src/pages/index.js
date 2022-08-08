@@ -59,18 +59,19 @@ const Landing = () => {
           <h5 className="text-lg">24/7 Support</h5>
         </div>
       </div>
-      <div className="products-wrap flex flex-wrap w-11/12 mx-auto justify-items-center items-center">
+      {/* Product Items */}
+      <div className="products-wrap grid md:grid-cols-3 lg:flex lg:flex-wrap w-11/12 mx-auto justify-items-center items-center">
         {products ? (
           products.slice(0, 12).map((product) => (
             <Link
               to="/"
-              className="single-product w-78 h-80 bg-white rounded-md shadow-lg hover:shadow-xl"
+              className="single-product w-56 h-80 bg-white rounded-md shadow-lg hover:shadow-xl"
               key={product._id}
             >
               <img
-                src={pad}
+                src={`https://quiet-lowlands-64875.herokuapp.com/${product.image}`}
                 alt=""
-                className="w-full h-1/2 object-cover object-center rounded-t-md"
+                className="w-full h-2/3 object-cover object-center rounded-t-md"
               />
               <div className="product-info p-4">
                 <p className="py-2.5">{product.name}</p>

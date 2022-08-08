@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         "dark-overlay": "#00000082",
         primary: "#1071fd",
+        "primary-drk": "#08387d",
+        "placeholder-txt": "#9ca3af",
+        "custom-bg": "#ededed",
       },
     },
   },

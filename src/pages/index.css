@@ -29,5 +29,7 @@
 .input-wrap-name{
     max-width: 48.5%;
 }
-
+input:focus{
+    outline: none;
+}
 
