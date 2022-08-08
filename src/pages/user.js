@@ -4,9 +4,9 @@ import SideNavBar from "../components/sideNavBar/sideNavBar";
 
 const User = () => {
   return (
-    <div className="bg-custom-bg w-full h-screen flex">
+    <div className="bg-custom-bg w-full h-screen flex relative">
       <SideNavBar />
-      <div className="user-section w-full h-auto bg-red-300">
+      <div className="user-section w-full h-auto">
         <TopNavbar />
       </div>
     </div>
