@@ -54,9 +54,11 @@ const User = () => {
                 className="rounded-md pl-4 border-2 w-full h-8 lg:h-10 mt-4"
               />
             </div>
-            <button className="bg-primary w-full flex items-center justify-center rounded-md h-8 lg:h-10 text-white text-sm lg:text-lg px-5 hover:bg-primary-drk my-4">
-              Save Changes
-            </button>
+            <div className="button-wrap flex items-center justify-center">
+              <button className="bg-primary w-1/2  rounded-md h-8 lg:h-10 text-white text-sm lg:text-lg px-5 hover:bg-primary-drk my-4">
+                Save Changes
+              </button>
+            </div>
           </form>
         </div>
       </div>

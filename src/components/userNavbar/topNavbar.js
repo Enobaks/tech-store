@@ -18,7 +18,7 @@ const topNavbar = () => {
           </form>
         </div>
         <div className="profile">
-          <i class="fa-regular fa-user mr-2 text-lg"></i>
+          <i className="fa-regular fa-user mr-2 text-lg"></i>
           <span>Hi, John Doe</span>
         </div>
         <div>

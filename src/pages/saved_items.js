@@ -1,7 +1,7 @@
 import React from "react";
 
-const saved_items = () => {
-  return <div>saved_items</div>;
+const SavedItems = () => {
+  return <div>SavedItems</div>;
 };
 
-export default saved_items;
+export default SavedItems;
