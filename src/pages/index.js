@@ -5,7 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./index.css";
 import gadget from "../images/gadget4.jpg";
-import pad from "../images/gadget2.jpg";
+// import pad from "../images/gadget2.jpg";
 
 const Landing = () => {
   let [products, setProducts] = useState(null);
@@ -84,7 +84,9 @@ const Landing = () => {
         )}
       </div>
       <div className="cta w-full h-80 flex flex-col items-center justify-center">
-        <h3 className="text-5xl font-bold mb-7">To view more items </h3>
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-7">
+          To view more items{" "}
+        </h3>
         <div className="btn-wrap">
           <Link to="/signup.user">
             <button className="rounded-lg bg-primary border-2 border-primary w-20 hover:scale-105 duration-200 text-white mr-4 py-2">

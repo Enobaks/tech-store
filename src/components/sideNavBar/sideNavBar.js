@@ -13,23 +13,23 @@ const sideNavBar = () => {
       </Link>
       <hr className="w-full" />
       <ul className="nat w-full h-full flex flex-col items-center pt-16">
-        <Link to="" className="w-full mb-5">
+        <Link to="/user" className="w-full mb-5">
           <li className="text-center">
             {" "}
             <i className="fa-regular fa-user mr-2 text-lg"></i>Profile
           </li>
         </Link>
-        <Link to="/user/order" className="w-full mb-5">
+        <Link to="order" className="w-full mb-5">
           <li className="text-center">
             <i className="fa-solid fa-cart-arrow-down mr-2 text-lg"></i>Orders
           </li>
         </Link>
-        <Link to="/user/saveditem" className="w-full mb-5">
+        <Link to="saveditem" className="w-full mb-5">
           <li className="text-center">
             <i className="fa-regular fa-heart mr-2 text-lg"></i>Saved
           </li>
         </Link>
-        <Link to="" className="w-full mb-5">
+        <Link to="/" className="w-full mb-5">
           <li className="text-center">
             <i className="fa-solid fa-right-from-bracket mr-2 text-lg"></i>
             Logout
