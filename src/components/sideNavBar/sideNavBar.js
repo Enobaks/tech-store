@@ -4,7 +4,7 @@ import logo from "../../images/ts_logo_icon.png";
 
 const sideNavBar = () => {
   return (
-    <div className="sideNavContainer w-80 bg-white z-20 drop-shadow-md flex flex-col items-center justify-between ">
+    <div className="hidden sideNavContainer w-80 bg-white z-20 drop-shadow-md lg:flex flex-col items-center justify-between ">
       <Link to="/" className="logo flex mt-6 mb-5">
         <img src={logo} alt="Logo" className="!w-8 !h-8" />
         <span className="md:block  hidden text-3xl font-medium">
