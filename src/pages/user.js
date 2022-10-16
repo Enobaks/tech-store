@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import TopNavbar from "../components/userNavbar/topNavbar";
 import SideNavBar from "../components/sideNavBar/sideNavBar";
@@ -6,11 +6,14 @@ import SideNavBar from "../components/sideNavBar/sideNavBar";
 // import Orders from "./orders";
 
 const User = () => {
+  const [sideNav, setSideNav] = useState(true);
+  const responsiveSideBar = () => setSideNav(!sideNav);
+
   return (
-    <div className="bg-custom-bg w-full h-auto flex relative">
-      <SideNavBar />
+    <div className="bg-custom-bg w-full h-screen flex relative">
+      <SideNavBar handleNav={responsiveSideBar} sideNav={sideNav} />
       <div className="user-section w-full h-auto">
-        <TopNavbar />
+        <TopNavbar handleNav={responsiveSideBar} />
 
         <Outlet />
       </div>

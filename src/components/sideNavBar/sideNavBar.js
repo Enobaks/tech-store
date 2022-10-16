@@ -2,17 +2,38 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/ts_logo_icon.png";
 
-const sideNavBar = () => {
+const sideNavBar = ({ handleNav, sideNav }) => {
   return (
-    <div className="hidden sideNavContainer w-80 bg-white z-20 drop-shadow-md lg:flex flex-col items-center justify-between ">
-      <Link to="/" className="logo flex mt-6 mb-5">
-        <img src={logo} alt="Logo" className="!w-8 !h-8" />
-        <span className="md:block  hidden text-3xl font-medium">
-          Tech Store
-        </span>
-      </Link>
+    <div
+      className={`block sideNavContainer absolute lg:relative ${
+        sideNav ? "w-0" : "w-56"
+      } h-screen duration-300 bg-white z-20 drop-shadow-md lg:flex flex-col items-center justify-between `}
+    >
+      <div className="logo flex mt-6 mb-5">
+        <div
+          className={`logo-wrap flex justify-around items-center w-full ${
+            sideNav ? "hidden" : "block"
+          }`}
+        >
+          <Link to="/" className="sg flex items-center">
+            <img src={logo} alt="Logo" className="!w-8 !h-8" />
+            <span className="md:block  hidden ml-2 md:text-lg lg:text-3xl font-medium">
+              Tech Store
+            </span>
+          </Link>
+
+          <i
+            className="fa-solid fa-xmark lg:hidden text-2xl text-red-600 "
+            onClick={handleNav}
+          ></i>
+        </div>
+      </div>
       <hr className="w-full" />
-      <ul className="nat w-full h-full flex flex-col items-center pt-16">
+      <ul
+        className={`nat w-full h-full flex flex-col items-center pt-16 ${
+          sideNav ? "hidden" : "block"
+        }`}
+      >
         <Link to="/user" className="w-full mb-5">
           <li className="text-center">
             {" "}

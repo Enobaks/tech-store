@@ -1,17 +1,8 @@
 import React from "react";
 import canvas from "../images/canvas.jpg";
-import SideNavBar from "../components/sideNavBar/sideNavBar";
-import TopNavbar from "../components/userNavbar/topNavbar";
 
 const SavedItems = () => {
   return (
-    // <div className="bg-custom-bg w-full h-auto flex relative">
-    //   <SideNavBar />
-    //   <div className="user-orders w-full h-auto">
-    //     <TopNavbar />
-
-    //   </div>
-    // </div>
     <div className="orders user_details w-11/12 h-auto mx-auto mt-8 bg-white rounded-md p-4 drop-shadow-md relative">
       <h1 className="text-xl mb-2">Saved Items</h1>
       <hr className="mb-4 top-2 w-full" />
@@ -51,8 +42,12 @@ const SavedItems = () => {
               <p>On 01-05-2021</p>
             </div>
           </div>
-          <div className="action">
-            <button className="">Buy Now</button>
+          <div className="action flex flex-col justify-around">
+            <button className="p-4 bg-primary">Buy Now</button>
+            <div>
+              <i class="fa-solid fa-trash"></i>
+              <span>REMOVE</span>
+            </div>
           </div>
         </li>
       </ul>
