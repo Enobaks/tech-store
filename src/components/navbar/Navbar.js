@@ -64,12 +64,12 @@ const TopNavbar = ({ handleNav }) => {
             </form>
           </div>
 
-          <Link to="user" className="profile flex items-center">
+          <Link to="/user" className="profile flex items-center">
             <Unicons.UilUser />
             <span className="hidden lg:inline-block ml-3">John Doe</span>
           </Link>
 
-          <Link to="cart" className="flex relative items-center">
+          <Link to="/cart" className="flex relative items-center">
             <Unicons.UilShoppingCart />
             <span className="flex bg-red-500 w-4 h-4 text-xs rounded-xl text-white justify-center absolute left-4 lg:left-3 top-0 lg:top-1">
               2
