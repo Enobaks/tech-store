@@ -11,6 +11,7 @@ module.exports = {
         primary: "#1071fd",
         "primary-drk": "#08387d",
         "placeholder-txt": "#9ca3af",
+        "form-ash": "#c7c7cd",
         "custom-bg": "#ededed",
       },
     },

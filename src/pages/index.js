@@ -5,7 +5,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./index.css";
 import gadget from "../images/gadget4.jpg";
-// import pad from "../images/gadget2.jpg";
 
 const Landing = () => {
   let [products, setProducts] = useState(null);
@@ -60,11 +59,14 @@ const Landing = () => {
         </div>
       </div>
       {/* Product Items */}
-      <div className="products-wrap grid md:grid-cols-3 lg:flex lg:flex-wrap w-11/12 mx-auto justify-items-center items-center">
+      <div
+        className="products-wrap grid md:grid-cols-3 lg:flex lg:flex-wrap w-11/12 mx-auto justify-items-center items-center"
+        id="products"
+      >
         {products ? (
           products.slice(0, 12).map((product) => (
             <Link
-              to="/"
+              to={`product/${product._id}`}
               className="single-product w-56 h-80 bg-white rounded-md shadow-lg hover:shadow-xl"
               key={product._id}
             >
@@ -80,7 +82,7 @@ const Landing = () => {
             </Link>
           ))
         ) : (
-          <h4 className="text-xl">Loading</h4>
+          <h4 className="text-xl">Loading...</h4>
         )}
       </div>
       <div className="cta w-full h-80 flex flex-col items-center justify-center">

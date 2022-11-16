@@ -10,9 +10,9 @@ const User = () => {
   const responsiveSideBar = () => setSideNav(!sideNav);
 
   return (
-    <div className="bg-custom-bg w-full h-screen flex relative">
+    <div className="bg-custom-bg w-full h-auto flex ">
       <SideNavBar handleNav={responsiveSideBar} sideNav={sideNav} />
-      <div className="user-section w-full h-auto">
+      <div className="user-section w-full h-auto lg:ml-60">
         <TopNavbar handleNav={responsiveSideBar} />
 
         <Outlet />

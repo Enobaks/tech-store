@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { UilShoppingCart } from "@iconscout/react-unicons";
+import { Link } from "react-router-dom";
 
 const TopNavbar = ({ handleNav }) => {
   const [top, setTop] = useState(true);
@@ -21,13 +23,6 @@ const TopNavbar = ({ handleNav }) => {
               top ? "h-0" : "h-20"
             }`}
           >
-            {/* <div
-              className={`${
-                top ? "hidden" : "block"
-              } search-icon w-12 h-8 flex duration-300 items-center justify-center absolute top-6 lg:top-3 right-20`}
-            >
-              <i className="fa-solid fa-magnifying-glass text-placeholder-txt"></i>
-            </div> */}
             <input
               type="text"
               className={`${
@@ -57,29 +52,18 @@ const TopNavbar = ({ handleNav }) => {
             </form>
           </div>
 
-          <div className="profile lg:hidden">
+          <div className="profile block">
             <i className="fa-regular fa-user mr-2 text-lg"></i>
             <span className="hidden md:inline-block">John Doe</span>
           </div>
 
-          <div className="lg:hidden">
-            <i class="fa-solid fa-cart-shopping text-lg mr-2"></i>
+          <div className="flex">
+            <UilShoppingCart />
             <span className="text-xl hidden md:inline-block">Cart</span>
           </div>
-          {/* <div className="laptop-size lg:flex w-3/12 hidden justify-between">
-            <div className="profile">
-              <i className="fa-regular fa-user mr-2 text-lg"></i>
-              <span className="hidden md:inline-block">Hi, John Doe</span>
-            </div>
-            <div className="">
-              <i class="fa-light fa-square-question"></i>
-              <span>Help</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-cart-shopping text-lg mr-2"></i>
-              <span className="text-xl hidden md:inline-block">Cart</span>
-            </div>
-          </div> */}
+          <div>
+            <Link to="/">Shop</Link>
+          </div>
         </div>
       </div>
     </div>

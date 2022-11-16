@@ -1,13 +1,12 @@
-import React from 'react'
-import { ActionType } from '../constants/constant'
+import React from "react";
+import { ActionType } from "../constants/constant";
 
 const initialState = {
-    toggle: false
-}
+  toggle: false,
+};
 
-export const toggleReducer = (state = initialState, {type}) => {
- switch (type) {
-    case (ActionType.)
- }
-}
-
+// export const toggleReducer = (state = initialState, {type}) => {
+//  switch (type) {
+//     case (ActionType.)
+//  }
+// }

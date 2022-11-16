@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/ts_logo_icon.png";
+import { UilShoppingBag } from "@iconscout/react-unicons";
 
 const sideNavBar = ({ handleNav, sideNav }) => {
   return (
     <div
-      className={`block sideNavContainer absolute lg:relative ${
-        sideNav ? "w-0" : "w-56"
-      } h-screen duration-300 bg-white z-20 drop-shadow-md lg:flex flex-col items-center justify-between `}
+      className={`block sideNavContainer fixed  ${
+        !sideNav ? "w-0" : "w-56 lg:w-60"
+      } h-screen  duration-300 bg-white z-20 drop-shadow-md lg:flex flex-col items-center justify-between `}
     >
       <div className="logo flex mt-6 mb-5">
         <div
           className={`logo-wrap flex justify-around items-center w-full ${
-            sideNav ? "hidden" : "block"
+            !sideNav ? "hidden" : "block"
           }`}
         >
           <Link to="/" className="sg flex items-center">
@@ -30,8 +31,8 @@ const sideNavBar = ({ handleNav, sideNav }) => {
       </div>
       <hr className="w-full" />
       <ul
-        className={`nat w-full h-full flex flex-col items-center pt-16 ${
-          sideNav ? "hidden" : "block"
+        className={`nat w-full h-full flex flex-col transition duration-700 items-center pt-16 ${
+          !sideNav ? "hidden" : "block"
         }`}
       >
         <Link to="/user" className="w-full mb-5">
@@ -40,9 +41,13 @@ const sideNavBar = ({ handleNav, sideNav }) => {
             <i className="fa-regular fa-user mr-2 text-lg"></i>Profile
           </li>
         </Link>
+        <Link to="products" className="w-full mb-5">
+          <li className="text-center"> Products</li>
+        </Link>
         <Link to="order" className="w-full mb-5">
-          <li className="text-center">
-            <i className="fa-solid fa-cart-arrow-down mr-2 text-lg"></i>Orders
+          <li className="flex justify-center">
+            <UilShoppingBag className="mr-2" />
+            Orders
           </li>
         </Link>
         <Link to="saveditem" className="w-full mb-5">
